@@ -94,7 +94,7 @@ const BookDemoForm = () => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="relative space-y-5 ">
+        <form onSubmit={handleSubmit} className="relative space-y-5">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="space-y-1.5">
                     <label htmlFor="name" className="flex items-center gap-2 text-sm font-semibold text-prime-dark ml-1">

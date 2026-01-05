@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Check, X, Sparkles, CheckCircle2, ChartColumn } from 'lucide-react';
-
+import skilldeckLogo from '../../../public/logos/mainlogo.svg'
 import withoutSkilldeckImage from '../../../public/figma-designs/withandwithout.png'
 
 const withoutSkilldeck = [
@@ -81,10 +81,10 @@ const SkilldSolution = () => {
                 </div>
 
                 {/* Comparison Cards */}
-                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-0">
+                <div className="grid grid-cols-1 lg:grid-cols-3 gap-y-6 md:gap-0">
                     {/* Without Skilldeck Card */}
                     <div className="col-span-2 bg-white border border-gray-200 rounded-3xl p-6 md:p-8 shadow-sm md:mr-10">
-                        <div className="flex flex-col md:flex-row gap-6 items-center md:items-start">
+                        <div className="flex flex-col md:flex-row gap-6 items-center">
                             {/* Image Placeholder */}
                             <div className="w-full md:w-2/5 flex-shrink-0">
                                 <Image src={withoutSkilldeckImage} alt="Without Skilldeck" width={500} height={500} />
@@ -114,25 +114,30 @@ const SkilldSolution = () => {
                     </div>
 
                     {/* With Skilldeck Card */}
-                    <div className="bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-700 rounded-3xl p-6 md:p-8 shadow-lg relative overflow-hidden">
+                    <div className="bg-brand-gradient rounded-3xl p-6 md:p-8 shadow-lg relative overflow-hidden ">
                         <div className="space-y-6 mb-5">
                             <div className="w-10 h-10 bg-white/20 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/30">
                                 <Sparkles className="w-5 h-5 text-white" />
                             </div>
-                            <h4 className="text-xl md:text-2xl font-bold text-white">With Skilldeck</h4>
+                            <div className="flex items-center gap-2">
+                                <h4 className="text-xl md:text-2xl font-bold text-white">With </h4>
+                                <div className="bg-white py-1 px-3 rounded-full">
+                                    <Image src={skilldeckLogo} alt="Skilldeck" width={100} height={100} />
+                                </div>
+                            </div>
                         </div>
 
                         <ul className="space-y-4">
                             {withSkilldeck.map((item, index) => (
                                 <li key={index} className="flex items-start gap-3">
-                                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-emerald-400/20 flex items-center justify-center mt-0.5">
-                                        <Check className="w-3 h-3 text-emerald-300" />
+                                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-white flex items-center justify-center mt-0.5">
+                                        <Check className="w-3 h-3 text-brand-gradient" />
                                     </div>
                                     <span className="text-white/90 text-sm md:text-base">{item}</span>
                                 </li>
                             ))}
                         </ul>
-                        <div className="hidden md:block bg-brand-gradient h-60 w-60 rounded-full absolute -right-12 -top-12"></div>
+                        <div className="hidden md:block bg-brand-gradient h-40 w-40 rounded-full absolute -right-12 -top-12"></div>
                     </div>
 
                 </div>

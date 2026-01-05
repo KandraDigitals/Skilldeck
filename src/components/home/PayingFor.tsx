@@ -1,7 +1,10 @@
 import React from 'react';
 import Image from 'next/image';
-import { BadgeDollarSign, Gem, Wallet } from 'lucide-react';
+import { BadgeDollarSign } from 'lucide-react';
 import youEndUpPayingImage from '../../../public/figma-designs/Youenduppaying.png';
+import lostRevenueImage from '../../../public/figma-designs/youenduppaying/lostrevenue.png'
+import risingCostsImage from '../../../public/figma-designs/youenduppaying/risingcosts.png'
+import wastedBudgetImage from '../../../public/figma-designs/youenduppaying/wastedbudget.png'
 
 const payingItems = [
     "Multiple software subscriptions",
@@ -22,10 +25,10 @@ const PayingFor = () => {
                                 {/* Wasted Budget - Top Left */}
                                 <div className="relative rounded-2xl overflow-hidden shadow-md group hover:shadow-lg transition-shadow">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?w=400&h=300&fit=crop"
+                                        src={wastedBudgetImage}
                                         alt="Wasted Budget"
                                         fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                                     <div className="absolute bottom-3 left-3">
@@ -36,10 +39,10 @@ const PayingFor = () => {
                                 {/* Rising Costs - Top Right (spans 2 rows) */}
                                 <div className="relative rounded-2xl overflow-hidden shadow-md row-span-2 group hover:shadow-lg transition-shadow">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=400&h=600&fit=crop"
+                                        src={risingCostsImage}
                                         alt="Rising Costs"
                                         fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-rose-600/80 via-pink-500/40 to-transparent" />
                                     <div className="absolute bottom-4 left-4 right-4">
@@ -51,10 +54,10 @@ const PayingFor = () => {
                                 {/* Lost Revenue - Bottom Left */}
                                 <div className="relative rounded-2xl overflow-hidden shadow-md group hover:shadow-lg transition-shadow">
                                     <Image
-                                        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=400&h=300&fit=crop"
+                                        src={lostRevenueImage}
                                         alt="Lost Revenue"
                                         fill
-                                        className="object-cover group-hover:scale-105 transition-transform duration-300"
+                                        className="group-hover:scale-105 transition-transform duration-300"
                                     />
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                                     <div className="absolute bottom-3 left-3">

@@ -72,7 +72,7 @@ const BookADemo = () => {
                     </div>
 
                     {/* Right Form */}
-                    <div className="bg-white max-w-3xl w-full rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border border-gray-100 lg:p-6 xl:p-10">
+                    <div className="bg-white max-w-3xl w-full rounded-3xl md:shadow-[0_20px_50px_rgba(8,_112,_184,_0.07)] border border-gray-100 lg:p-6 xl:p-10 ">
                         <BookDemoForm />
                     </div>
 
